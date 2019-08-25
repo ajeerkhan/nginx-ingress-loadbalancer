@@ -46,8 +46,8 @@ Run below to create ingress k8s object. It defines two routes based on the path 
 
     kubectl create -f backend-rules/
 
-/blue -> if you access http://ingress-service/blue, you will get "Blue" message.
-/green -> if you access http://ingress-service/green, you will get "Green" message.
+/blue -> if you access http://ingress-service-ip-or-domain-mapped/blue, you will get "Blue" message.
+/green -> if you access http://ingress-service-ip-or-domain-mapped/green, you will get "Green" message.
 
 Like above, you are allowed to create 'N' ingress objects defining various routes....
 
