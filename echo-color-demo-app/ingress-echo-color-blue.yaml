@@ -1,0 +1,28 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: blue
+  name: blue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blue
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      containers:
+      - name: blue
+        image: gcr.io/k8s-proj-1/echo-color
+        env:
+        - name: COLOR
+          value: blue
+        ports:
+        - name: tcp
+          containerPort: 8080
+        resources: {}
+status: {}
